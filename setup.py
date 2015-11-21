@@ -27,7 +27,7 @@ if not os.path.exists('/var/lib/ee/'):
 
 # EasyEngine git function
 config = configparser.ConfigParser()
-config.read(os.path.expanduser("~")+'/.gitconfig')
+config.read([os.path.expanduser("~")+'/.gitconfig', '/etc/gitconfig'])
 try:
     ee_user = config['user']['name']
     ee_email = config['user']['email']
